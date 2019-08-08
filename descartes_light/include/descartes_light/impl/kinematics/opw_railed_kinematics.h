@@ -74,6 +74,10 @@ private:
             const IsValidFn<FloatType>& is_valid_fn,
             const GetRedundantSolutionsFn<FloatType>& redundant_sol_fn,
             std::vector<FloatType>& solution_set) const;
+
+  Eigen::Matrix<FloatType, 2, 1> getRange(const FloatType val,
+                                          const FloatType min_val,
+                                          const FloatType max_val) const;
 };
 
 using OPWRailedKinematicsF = OPWRailedKinematics<float>;
